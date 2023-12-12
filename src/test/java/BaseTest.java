@@ -3,7 +3,6 @@ import io.restassured.response.Response;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import utilities.PropertyUtils;
-import org.testng.Assert;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -23,18 +22,22 @@ public class BaseTest {
 
     }
 
-    // Utility method for asserting HTTP status code
-    public static void assertStatusCode(int actualStatusCode, int expectedStatusCode) {
-        Assert.assertEquals(actualStatusCode, expectedStatusCode, "Unexpected status code");
+    // Utility method to assert response status code
+    public static void assertStatusCode(Response response, int expectedStatusCode) {
+        assertEquals(response.getStatusCode(), expectedStatusCode,
+                "Expected status code " + expectedStatusCode + " but found " + response.getStatusCode());
     }
 
-
-    // Utility method for asserting HTTP status code, content type, and payload
-    public static void assertApiResponse(Response response, int expectedStatusCode, String expectedContentType, String expectedPayloadKey, Object expectedPayloadValue) {
-        assertEquals(response.getStatusCode(), expectedStatusCode, "Unexpected status code.");
-        assertTrue(response.getContentType().startsWith(expectedContentType), "Unexpected content type.");
-        assertEquals(response.jsonPath().get(expectedPayloadKey), expectedPayloadValue, "Unexpected payload value.");
+    // Utility method for asserting content type
+    public static void assertContentType(Response response, String expectedContentType) {
+        assertTrue(response.getContentType().startsWith(expectedContentType),
+                "Expected content type to start with " + expectedContentType + " but found " + response.getContentType());
     }
 
-
+    // Utility method for asserting a key-value pair in the payload
+    public static void assertPayloadValue(Response response, String jsonPathKey, Object expectedValue) {
+        Object actualValue = response.jsonPath().get(jsonPathKey);
+        assertEquals(actualValue, expectedValue,
+                "Expected payload value for key '" + jsonPathKey + "' to be '" + expectedValue + "', but found '" + actualValue + "'");
+    }
 }
