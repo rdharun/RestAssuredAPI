@@ -1,5 +1,6 @@
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -13,11 +14,13 @@ public class UserLoginTest extends BaseTest {
     @Test
     public void validateUserLogin() {
 
-        File jsonBody = new File("src/main/resources/userLogin.json");
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("email", "abc@gmail.com");
+        jsonObject.put("password" , "123456");
 
         Response response = RestAssured.given()
                 .header("Content-Type", "application/json")
-                .body(jsonBody)
+                .body(jsonObject.toJSONString())
                 .when()
                 .post("/api/auth/login");
 
