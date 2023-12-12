@@ -1,9 +1,8 @@
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
-import utilities.RandomEmailGenerator;
 import static org.testng.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertNotNull;
 
 
 public class UserLoginTest extends BaseTest {
@@ -20,6 +19,8 @@ public class UserLoginTest extends BaseTest {
                         "}\n")
                 .when()
                 .post("/api/auth/login");
+
+        assertNotNull(response.jsonPath().get("data.session.access_token"));
 
         int statusCode = response.getStatusCode();
 
