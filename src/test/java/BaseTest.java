@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeTest;
 import utilities.PropertyUtils;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 
@@ -37,7 +37,8 @@ public class BaseTest {
     // Utility method for asserting a key-value pair in the payload
     public static void assertPayloadValue(Response response, String jsonPathKey, Object expectedValue) {
         Object actualValue = response.jsonPath().get(jsonPathKey);
-        assertEquals(actualValue, expectedValue,
-                "Expected payload value for key '" + jsonPathKey + "' to be '" + expectedValue + "', but found '" + actualValue + "'");
+        assertThat(actualValue)
+                .as("Check response for key: %s", jsonPathKey)
+                .isEqualTo(expectedValue);
     }
 }
