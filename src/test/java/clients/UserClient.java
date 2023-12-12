@@ -1,25 +1,33 @@
 package clients;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import models.UserSignupRequest;
+import models.UserSignupResponse;
 import org.json.simple.JSONObject;
 
 public class UserClient {
 
+    private ObjectMapper objectMapper;
 
-    public Response createUser(String email, String password) {
+    public UserClient() {
+        this.objectMapper = new ObjectMapper();
+    }
+
+
+    public Response createUser(UserSignupRequest request) throws JsonProcessingException {
         String endpoint = "/api/auth/signup";
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("email", email);
-        requestBody.put("password", password);
 
         return RestAssured.given()
                 .header("Content-Type", "application/json")
-                .body(requestBody.toJSONString())
+                .body(objectMapper.writeValueAsString(request))
                 .when()
                 .post(endpoint);
     }
+
 
     public Response authenticateUser(String email, String password, String accessToken) {
         String endpoint = "/api/auth/login";
