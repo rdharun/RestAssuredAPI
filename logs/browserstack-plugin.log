@@ -40,3 +40,9 @@
 15:01:17.261 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
 15:01:36.731 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
 15:01:36.733 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+15:35:13.976 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+15:35:13.977 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+15:37:40.172 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+15:37:40.172 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+15:38:00.923 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+15:38:00.923 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null

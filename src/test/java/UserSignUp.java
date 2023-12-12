@@ -5,7 +5,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.RandomEmailGenerator;
 
-import static org.testng.Assert.assertEquals;
 
 public class UserSignUp extends BaseTest {
 
@@ -25,7 +24,9 @@ public class UserSignUp extends BaseTest {
         Response response = userClient.createUser(randomEmail, randomPassword);
 
 //        assertEquals(response.getStatusCode(), 201);
-        BaseTest.assertStatusCode(response.getStatusCode(), 201);
-        assertEquals(response.jsonPath().getString("data.user.email"), randomEmail);
+//        BaseTest.assertStatusCode(response.getStatusCode(), 201);
+        assertApiResponse(response, 201, "application/json", "data.user.email", randomEmail);
+
+//        assertEquals(response.jsonPath().getString("data.user.email"), randomEmail);
     }
 }

@@ -3,9 +3,6 @@ import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.RandomEmailGenerator;
-
-
-import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
 
@@ -31,8 +28,9 @@ public class UserLoginTest extends BaseTest {
         Response signInResponse = userClient.authenticateUser(randomEmail, password, accessToken);
 
 //        assertEquals(signInResponse.getStatusCode(), 200);
-        BaseTest.assertStatusCode(signInResponse.getStatusCode(), 200);
-        assertEquals(signInResponse.jsonPath().getString("data.user.email"), randomEmail);
+//        BaseTest.assertStatusCode(signInResponse.getStatusCode(), 200);
+        assertApiResponse(signInResponse, 200, "application/json", "data.user.email", randomEmail);
+//        assertEquals(signInResponse.jsonPath().getString("data.user.email"), randomEmail);
         assertNotNull(signInResponse.jsonPath().getString("data.session.access_token"));
 
 
