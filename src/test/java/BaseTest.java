@@ -18,11 +18,11 @@ public class BaseTest {
 
     }
 
-
     // Utility method for asserting HTTP status code
-    protected void assertStatusCode(int actualStatusCode, int expectedStatusCode) {
+    public static void assertStatusCode(int actualStatusCode, int expectedStatusCode) {
         Assert.assertEquals(actualStatusCode, expectedStatusCode, "Unexpected status code");
     }
+
 
 
 }

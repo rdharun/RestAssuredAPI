@@ -24,7 +24,8 @@ public class UserSignUp extends BaseTest {
 
         Response response = userClient.createUser(randomEmail, randomPassword);
 
-        assertEquals(response.getStatusCode(), 201);
+//        assertEquals(response.getStatusCode(), 201);
+        BaseTest.assertStatusCode(response.getStatusCode(), 201);
         assertEquals(response.jsonPath().getString("data.user.email"), randomEmail);
     }
 }
