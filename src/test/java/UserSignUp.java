@@ -1,11 +1,10 @@
 import clients.UserClient;
-import io.restassured.response.Response;
+import models.SignupResponseBody;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.RandomEmailGenerator;
 
-import static org.testng.Assert.assertEquals;
 
 public class UserSignUp extends BaseTest {
 
@@ -22,9 +21,10 @@ public class UserSignUp extends BaseTest {
         String randomPassword = RandomStringUtils.randomAlphanumeric(7);
         String randomEmail = RandomEmailGenerator.generateRandomEmailId();
 
-        Response response = userClient.createUser(randomEmail, randomPassword);
+        SignupResponseBody signupResponseBodyBody = userClient.signup(randomEmail, randomPassword);
 
-        assertEquals(response.getStatusCode(), 201);
-        assertEquals(response.jsonPath().getString("data.user.email"), randomEmail);
+        signupResponseBodyBody.assertSuccessfullySignupResponse(randomEmail);
+
+
     }
 }

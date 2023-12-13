@@ -3,36 +3,49 @@ package clients;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.json.simple.JSONObject;
+import models.LoginRequestBody;
+import models.LoginResponseBody;
+import models.SignupRequestBody;
+import models.SignupResponseBody;
 
 public class UserClient {
 
+    public SignupResponseBody signup(String email, String password) {
+        SignupRequestBody signupRequestBodyBody = SignupRequestBody.builder()
+                .email(email)
+                .password(password)
+                .build();
 
-    public Response createUser(String email, String password) {
-        String endpoint = "/api/auth/signup";
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("email", email);
-        requestBody.put("password", password);
-
-        return RestAssured.given()
-                .header("Content-Type", "application/json")
-                .body(requestBody.toJSONString())
+        Response response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(signupRequestBodyBody)
                 .when()
-                .post(endpoint);
+                .post("/api/auth/signup");
+
+        SignupResponseBody signupResponseBodyBody = response.as(SignupResponseBody.class);
+        signupResponseBodyBody.setStatusCode(response.getStatusCode());
+
+        return signupResponseBodyBody;
     }
 
-    public Response authenticateUser(String email, String password, String accessToken) {
-        String endpoint = "/api/auth/login";
 
-        return RestAssured.given()
+    public LoginResponseBody login(String email, String password, String accessToken) {
+        LoginRequestBody loginRequestBody = LoginRequestBody.builder()
+                .email(email)
+                .password(password)
+                .build();
+
+        Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer " + accessToken)
-                .body(String.format("{\n" +
-                        "    \"email\": \"%s\",\n" +
-                        "    \"password\": \"%s\"\n" +
-                        "}", email, password))
+                .body(loginRequestBody)
                 .when()
-                .post(endpoint);
+                .post("/api/auth/login");
+
+        LoginResponseBody loginResponseBody = response.as(LoginResponseBody.class);
+        loginResponseBody.setStatusCode(response.getStatusCode());
+
+        return loginResponseBody;
     }
 
 }
