@@ -3,23 +3,22 @@ import models.SignupResponseBody;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import testData.UserData;
-import utilities.DataProvider;
 import utilities.RandomGenerator;
+import utilities.TestDataRepository;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class UserSignUp extends BaseTest {
 
     private UserClient userClient;
-    private DataProvider userDataProvider;
     private RandomGenerator randomGenerator;
+    private TestDataRepository testDataRepository;
 
     @BeforeClass
     public void beforeClass() {
         userClient = new UserClient();
-        userDataProvider = new DataProvider("src/main/java/testData/userData.json");
+        testDataRepository.loadTestData("src/main/java/testData/userData.json");
+
         randomGenerator = new RandomGenerator();
 
     }
@@ -30,7 +29,7 @@ public class UserSignUp extends BaseTest {
 
         String randomEmail = randomGenerator.generateRandomEmail("gmail.com");
 
-        String password = userDataProvider.getData("validUser", UserData.class).getPassword();
+        String password = testDataRepository.getTestData("validUser").get("password").asText();
 
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
@@ -46,9 +45,9 @@ public class UserSignUp extends BaseTest {
     @Test
     public void invalidCredentialsSignUp() {
 
-        UserData invalidUser = userDataProvider.getData("invalidUser", UserData.class);
-        String email = invalidUser.getEmail();
-        String password = invalidUser.getPassword();
+        String email = testDataRepository.getTestData("invalidUser").get("email").asText();
+        String password = testDataRepository.getTestData("invalidUser").get("password").asText();
+
 
         SignupResponseBody signupResponseBody = userClient.signup(email, password);
 
