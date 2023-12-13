@@ -7,10 +7,14 @@ import models.LoginRequestBody;
 import models.LoginResponseBody;
 import models.SignupRequestBody;
 import models.SignupResponseBody;
+import utilities.EndpointConfig;
 
 public class UserClient {
 
     public SignupResponseBody signup(String email, String password) {
+
+        String signupEndpoint = EndpointConfig.getEndpoint("auth", "signup");
+
         SignupRequestBody signupRequestBodyBody = SignupRequestBody.builder()
                 .email(email)
                 .password(password)
@@ -20,7 +24,7 @@ public class UserClient {
                 .contentType(ContentType.JSON)
                 .body(signupRequestBodyBody)
                 .when()
-                .post("/api/auth/signup");
+                .post(signupEndpoint);
 
         SignupResponseBody signupResponseBodyBody = response.as(SignupResponseBody.class);
         signupResponseBodyBody.setStatusCode(response.getStatusCode());
@@ -30,6 +34,8 @@ public class UserClient {
 
 
     public LoginResponseBody login(String email, String password, String accessToken) {
+        String loginEndpoint = EndpointConfig.getEndpoint("auth", "login");
+
         LoginRequestBody loginRequestBody = LoginRequestBody.builder()
                 .email(email)
                 .password(password)
@@ -40,7 +46,7 @@ public class UserClient {
                 .header("Authorization", "Bearer " + accessToken)
                 .body(loginRequestBody)
                 .when()
-                .post("/api/auth/login");
+                .post(loginEndpoint);
 
         LoginResponseBody loginResponseBody = response.as(LoginResponseBody.class);
         loginResponseBody.setStatusCode(response.getStatusCode());

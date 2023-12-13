@@ -114,7 +114,7 @@ public class SignupResponseBody {
         private List<String> providers;
     }
 
-    public void assertSuccessfullySignupResponse(String email) {
+    public void assertSignupResponse(String email) {
         assertEquals(this.getStatusCode(), 201, "Invalid status code");
         assertEquals(this.getData().getUser().getEmail(), email, "Invalid email id");
         assertNotNull(this.getData().getSession().accessToken, "Access token should not be null");
