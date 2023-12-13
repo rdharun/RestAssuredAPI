@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import utilities.RandomEmailGenerator;
 import utilities.TestDataLoader;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class UserSignUp extends BaseTest {
 
@@ -25,7 +27,10 @@ public class UserSignUp extends BaseTest {
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, randomPassword);
 
-        signupResponseBody.assertSignupResponse(randomEmail);
+//        signupResponseBody.assertSignupResponse(randomEmail);
+        assertEquals(signupResponseBody.getStatusCode(), 201);
+        assertEquals(signupResponseBody.getData().getUser().getEmail(), randomEmail);
+
 
     }
 
