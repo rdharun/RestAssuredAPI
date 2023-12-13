@@ -6,8 +6,6 @@ import org.testng.annotations.Test;
 import utilities.RandomGenerator;
 import utilities.TestDataRepository;
 
-
-
 public class UserSignUp extends BaseTest {
 
     private UserClient userClient;
@@ -27,7 +25,7 @@ public class UserSignUp extends BaseTest {
     public void validateUserSignUp() {
 
 
-        String randomEmail = randomGenerator.generateRandomEmail("gmail.com");
+        String randomEmail = randomGenerator.generateRandomEmailId();
 
         String password = testDataRepository.getTestData("validUser").get("password").asText();
 
