@@ -116,7 +116,7 @@ public class LoginResponseBody {
         private List<String> providers;
     }
 
-    public void assertSuccessfullyLoginResponse(String email) {
+    public void assertLoginResponse(String email) {
         assertEquals(this.getStatusCode(), 200, "Status code is not valid");
         assertEquals(this.getData().getUser().getEmail(), email, "Email is not matching");
         assertNotNull(this.getData().getSession().getAccessToken(), "Access token should not be null");

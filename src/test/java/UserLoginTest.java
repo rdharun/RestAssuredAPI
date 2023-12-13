@@ -4,6 +4,7 @@ import models.SignupResponseBody;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.RandomEmailGenerator;
+import utilities.TestDataLoader;
 
 public class UserLoginTest extends BaseTest {
 
@@ -18,7 +19,7 @@ public class UserLoginTest extends BaseTest {
     public void validateUserLogin() {
 
         String randomEmail = RandomEmailGenerator.generateRandomEmailId();
-        String password = "12345678";
+        String password = TestDataLoader.getValidUserPassword();
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
         String accessToken = signupResponseBody.getData().getSession().getAccessToken();
@@ -27,7 +28,7 @@ public class UserLoginTest extends BaseTest {
         LoginResponseBody loginResponseBody = userClient.login(randomEmail, password, accessToken);
 
 
-        loginResponseBody.assertSuccessfullyLoginResponse(randomEmail);
+        loginResponseBody.assertLoginResponse(randomEmail);
 
     }
 }

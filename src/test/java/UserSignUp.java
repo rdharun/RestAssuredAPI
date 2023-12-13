@@ -1,9 +1,10 @@
 import clients.UserClient;
 import models.SignupResponseBody;
-import org.apache.commons.lang3.RandomStringUtils;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.RandomEmailGenerator;
+import utilities.TestDataLoader;
 
 
 public class UserSignUp extends BaseTest {
@@ -18,12 +19,25 @@ public class UserSignUp extends BaseTest {
     @Test
     public void validateUserSignUp() {
 
-        String randomPassword = RandomStringUtils.randomAlphanumeric(7);
+        String randomPassword = TestDataLoader.getValidUserPassword();
+
         String randomEmail = RandomEmailGenerator.generateRandomEmailId();
 
-        SignupResponseBody signupResponseBodyBody = userClient.signup(randomEmail, randomPassword);
+        SignupResponseBody signupResponseBody = userClient.signup(randomEmail, randomPassword);
 
-        signupResponseBodyBody.assertSuccessfullySignupResponse(randomEmail);
+        signupResponseBody.assertSignupResponse(randomEmail);
+
+    }
+
+
+    @Test
+    public void invalidCredentialsSignUp() {
+        String invalidEmail = TestDataLoader.getInvalidUserEmail();
+        String invalidPassword = TestDataLoader.getInvalidUserPassword();
+
+        SignupResponseBody signupResponseBody = userClient.signup(invalidEmail, invalidPassword);
+
+        Assert.assertEquals(signupResponseBody.getStatusCode(), 401, "Expected status code 400 for invalid sign-up");
 
 
     }
