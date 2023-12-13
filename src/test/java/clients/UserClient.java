@@ -1,46 +1,51 @@
 package clients;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import models.UserSignupRequest;
-import models.UserSignupResponse;
-import org.json.simple.JSONObject;
+import models.LoginRequestBody;
+import models.LoginResponseBody;
+import models.SignupRequestBody;
+import models.SignupResponseBody;
 
 public class UserClient {
 
-    private ObjectMapper objectMapper;
+    public SignupResponseBody signup(String email, String password) {
+        SignupRequestBody signupRequestBodyBody = SignupRequestBody.builder()
+                .email(email)
+                .password(password)
+                .build();
 
-    public UserClient() {
-        this.objectMapper = new ObjectMapper();
-    }
-
-
-    public Response createUser(UserSignupRequest request) throws JsonProcessingException {
-        String endpoint = "/api/auth/signup";
-
-        return RestAssured.given()
-                .header("Content-Type", "application/json")
-                .body(objectMapper.writeValueAsString(request))
+        Response response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(signupRequestBodyBody)
                 .when()
-                .post(endpoint);
+                .post("/api/auth/signup");
+
+        SignupResponseBody signupResponseBodyBody = response.as(SignupResponseBody.class);
+        signupResponseBodyBody.setStatusCode(response.getStatusCode());
+
+        return signupResponseBodyBody;
     }
 
 
-    public Response authenticateUser(String email, String password, String accessToken) {
-        String endpoint = "/api/auth/login";
+    public LoginResponseBody login(String email, String password, String accessToken) {
+        LoginRequestBody loginRequestBody = LoginRequestBody.builder()
+                .email(email)
+                .password(password)
+                .build();
 
-        return RestAssured.given()
+        Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer " + accessToken)
-                .body(String.format("{\n" +
-                        "    \"email\": \"%s\",\n" +
-                        "    \"password\": \"%s\"\n" +
-                        "}", email, password))
+                .body(loginRequestBody)
                 .when()
-                .post(endpoint);
+                .post("/api/auth/login");
+
+        LoginResponseBody loginResponseBody = response.as(LoginResponseBody.class);
+        loginResponseBody.setStatusCode(response.getStatusCode());
+
+        return loginResponseBody;
     }
 
 }

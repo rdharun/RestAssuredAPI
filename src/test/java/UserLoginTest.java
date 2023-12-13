@@ -1,15 +1,9 @@
 import clients.UserClient;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import io.restassured.response.Response;
-import models.UserSignupRequest;
+import models.LoginResponseBody;
+import models.SignupResponseBody;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.RandomEmailGenerator;
-
-
-import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
-
 
 public class UserLoginTest extends BaseTest {
 
@@ -21,24 +15,19 @@ public class UserLoginTest extends BaseTest {
     }
 
     @Test
-    public void validateUserLogin() throws JsonProcessingException {
+    public void validateUserLogin() {
 
         String randomEmail = RandomEmailGenerator.generateRandomEmailId();
         String password = "12345678";
-        UserSignupRequest signupRequest = new UserSignupRequest();
-        signupRequest.setEmail(randomEmail);
-        signupRequest.setPassword(password);
+
+        SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
+        String accessToken = signupResponseBody.getData().getSession().getAccessToken();
 
 
-        Response response = userClient.createUser(signupRequest);
-        String accessToken = response.jsonPath().getString("data.session.access_token");
+        LoginResponseBody loginResponseBody = userClient.login(randomEmail, password, accessToken);
 
-        Response signInResponse = userClient.authenticateUser(randomEmail, password, accessToken);
 
-        assertEquals(signInResponse.getStatusCode(), 200);
-        assertEquals(signInResponse.jsonPath().getString("data.user.email"), randomEmail);
-        assertNotNull(signInResponse.jsonPath().getString("data.session.access_token"));
-
+        loginResponseBody.assertSuccessfullyLoginResponse(randomEmail);
 
     }
 }
