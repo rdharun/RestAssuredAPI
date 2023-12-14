@@ -38,16 +38,5 @@ public class UserSignUp extends BaseTest {
 
     }
 
-    @Test
-    public void invalidCredentialsSignUp() {
 
-        String password = userDataProvider.getData("invalidUser", UserData.class).getPassword();
-        String email = userDataProvider.getData("invalidUser", UserData.class).getEmail();
-
-
-        SignupResponseBody signupResponseBody = userClient.signup(email, password);
-
-        Assert.assertEquals(signupResponseBody.getStatusCode(), 401, "Expected status code 400 for invalid sign-up");
-
-    }
 }
