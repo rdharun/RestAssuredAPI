@@ -2,18 +2,21 @@ package utilities;
 
 import com.github.javafaker.Faker;
 
-/**
- * A utility class for generating random email addresses using the Faker library.
- */
+import java.util.Random;
+
 public class RandomData {
-    private final Faker faker = new Faker();
+    private final Faker faker;
+    private final Random random;
+
+    // Constructor that takes a Random instance with a fixed seed
+    public RandomData(long seed) {
+        this.faker = new Faker();
+        this.random = new Random(seed);
+    }
 
     public String generateRandomEmail(String domain) {
-        // create a more robust email generator that includes verifications
         String username = faker.name().username();
-        // Replace consecutive dots or any other unwanted characters that appear due to random generation logic.
         String sanitizedUsername = username.replaceAll("\\.{2,}", ".");
-        // Ensure the local part of the email does not begin or end with a dot
         if (sanitizedUsername.startsWith(".")) {
             sanitizedUsername = sanitizedUsername.substring(1);
         }

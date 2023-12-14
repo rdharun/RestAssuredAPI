@@ -17,7 +17,7 @@ public class UserLoginTest extends BaseTest {
     @BeforeClass
     public void beforeClass() {
         userClient = new UserClient();
-        randomData = new RandomData();
+        randomData = new RandomData(42);
         userDataProvider = new DataProvider("src/main/java/testData/userData.json");
 
     }
