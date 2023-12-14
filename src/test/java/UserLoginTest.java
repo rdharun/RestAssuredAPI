@@ -5,29 +5,28 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import testData.UserData;
 import utilities.DataProvider;
-import utilities.RandomGenerator;
+import utilities.RandomData;
 
 public class UserLoginTest extends BaseTest {
 
     private UserClient userClient;
-    private RandomGenerator randomGenerator;
+    private RandomData randomData;
     private DataProvider userDataProvider;
 
 
     @BeforeClass
     public void beforeClass() {
         userClient = new UserClient();
-        randomGenerator = new RandomGenerator();
+        randomData = new RandomData();
         userDataProvider = new DataProvider("src/main/java/testData/userData.json");
 
     }
 
     @Test
     public void validateUserLogin() {
-        String randomEmail = randomGenerator.generateRandomEmailId();
+        String randomEmail = randomData.generateRandomEmail("gmail.com");
         UserData validUser = userDataProvider.getData("validUser", UserData.class);
         String password = validUser.getPassword();
-
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
         String accessToken = signupResponseBody.getData().getSession().getAccessToken();

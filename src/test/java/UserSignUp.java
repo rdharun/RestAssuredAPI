@@ -5,12 +5,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import testData.UserData;
 import utilities.DataProvider;
-import utilities.RandomGenerator;
+import utilities.RandomData;
 
 public class UserSignUp extends BaseTest {
 
     private UserClient userClient;
-    private RandomGenerator randomGenerator;
+    private RandomData randomData;
 
     private DataProvider userDataProvider;
 
@@ -19,7 +19,7 @@ public class UserSignUp extends BaseTest {
         userClient = new UserClient();
         userDataProvider = new DataProvider("src/main/java/testData/userData.json");
 
-        randomGenerator = new RandomGenerator();
+        randomData = new RandomData();
 
     }
 
@@ -27,7 +27,7 @@ public class UserSignUp extends BaseTest {
     public void validateUserSignUp() {
 
 
-        String randomEmail = randomGenerator.generateRandomEmailId();
+        String randomEmail = randomData.generateRandomEmail("gmail.com");
 
         String password = userDataProvider.getData("validUser", UserData.class).getPassword();
 
@@ -35,10 +35,6 @@ public class UserSignUp extends BaseTest {
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
 
         signupResponseBody.assertSignupResponse(randomEmail);
-
-//        assertEquals(signupResponseBody.getStatusCode(), 201);
-//        assertEquals(signupResponseBody.getData().getUser().getEmail(), randomEmail);
-
 
     }
 
