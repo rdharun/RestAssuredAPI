@@ -3,19 +3,21 @@ import models.SignupResponseBody;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import testData.UserData;
+import utilities.DataProvider;
 import utilities.RandomGenerator;
-import utilities.TestDataRepository;
 
 public class UserSignUp extends BaseTest {
 
     private UserClient userClient;
     private RandomGenerator randomGenerator;
-    private TestDataRepository testDataRepository;
+
+    private DataProvider userDataProvider;
 
     @BeforeClass
     public void beforeClass() {
         userClient = new UserClient();
-        testDataRepository.loadTestData("src/main/java/testData/userData.json");
+        userDataProvider = new DataProvider("src/main/java/testData/userData.json");
 
         randomGenerator = new RandomGenerator();
 
@@ -27,7 +29,7 @@ public class UserSignUp extends BaseTest {
 
         String randomEmail = randomGenerator.generateRandomEmailId();
 
-        String password = testDataRepository.getTestData("validUser").get("password").asText();
+        String password = userDataProvider.getData("validUser", UserData.class).getPassword();
 
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
@@ -43,8 +45,8 @@ public class UserSignUp extends BaseTest {
     @Test
     public void invalidCredentialsSignUp() {
 
-        String email = testDataRepository.getTestData("invalidUser").get("email").asText();
-        String password = testDataRepository.getTestData("invalidUser").get("password").asText();
+        String password = userDataProvider.getData("invalidUser", UserData.class).getPassword();
+        String email = userDataProvider.getData("invalidUser", UserData.class).getEmail();
 
 
         SignupResponseBody signupResponseBody = userClient.signup(email, password);

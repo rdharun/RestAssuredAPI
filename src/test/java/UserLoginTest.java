@@ -3,28 +3,30 @@ import models.LoginResponseBody;
 import models.SignupResponseBody;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import testData.UserData;
+import utilities.DataProvider;
 import utilities.RandomGenerator;
-import utilities.TestDataRepository;
 
 public class UserLoginTest extends BaseTest {
 
     private UserClient userClient;
     private RandomGenerator randomGenerator;
-    private TestDataRepository testDataRepository;
+    private DataProvider userDataProvider;
+
 
     @BeforeClass
     public void beforeClass() {
         userClient = new UserClient();
         randomGenerator = new RandomGenerator();
-        testDataRepository.loadTestData("src/main/java/testData/userData.json");
+        userDataProvider = new DataProvider("src/main/java/testData/userData.json");
 
     }
 
     @Test
     public void validateUserLogin() {
         String randomEmail = randomGenerator.generateRandomEmailId();
-
-        String password = testDataRepository.getTestData("validUser").get("password").asText();
+        UserData validUser = userDataProvider.getData("validUser", UserData.class);
+        String password = validUser.getPassword();
 
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
