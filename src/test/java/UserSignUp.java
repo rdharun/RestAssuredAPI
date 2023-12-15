@@ -1,8 +1,5 @@
 import clients.UserClient;
-import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import models.SignupResponseBody;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -20,6 +17,8 @@ public class UserSignUp extends BaseTest {
     private RandomData randomData;
     private DataProvider userDataProvider;
 
+    private long startTime;
+
 
     @BeforeClass
     public void beforeClass() {
@@ -34,6 +33,11 @@ public class UserSignUp extends BaseTest {
             // Get logs and add them to the Allure report
             String logs = LogUtility.captureLogs(result.getThrowable());
             AllureLogger.addLogsToAllureReport(logs, result.getThrowable());
+
+            // Add execution time to the report
+            long executionTime = System.currentTimeMillis() - startTime;
+            Allure.addAttachment("Execution Time", "text/plain", "Execution time: " + executionTime + " ms");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
