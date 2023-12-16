@@ -37,8 +37,7 @@ public class UserLoginTest extends BaseTest {
 
 
 
-    @Test
-    @Description("Validating the user login API")
+    @Test (description = "Validating the user login API")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Login")
     public void validateUserLogin() {

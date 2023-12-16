@@ -33,8 +33,7 @@ public class UserSignUp extends BaseTest {
     }
 
 
-    @Test
-    @Description("Validating the user sign API")
+    @Test (description = "Validating the user signup API")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Signup")
     public void validateUserSignUp() {
