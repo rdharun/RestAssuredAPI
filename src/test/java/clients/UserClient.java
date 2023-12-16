@@ -15,14 +15,14 @@ public class UserClient {
 
         String signupEndpoint = EndpointConfig.getEndpoint("auth", "signup");
 
-        SignupRequestBody signupRequestBodyBody = SignupRequestBody.builder()
+        SignupRequestBody signupRequestBody = SignupRequestBody.builder()
                 .email(email)
                 .password(password)
                 .build();
 
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
-                .body(signupRequestBodyBody)
+                .body(signupRequestBody)
                 .when()
                 .post(signupEndpoint);
 

@@ -1,11 +1,15 @@
 import clients.UserClient;
+import io.qameta.allure.*;
 import models.LoginResponseBody;
 import models.SignupResponseBody;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import testData.UserData;
 import utilities.DataProvider;
 import utilities.RandomData;
+
 
 public class UserLoginTest extends BaseTest {
 
@@ -22,7 +26,20 @@ public class UserLoginTest extends BaseTest {
 
     }
 
-    @Test
+    @AfterMethod
+    public void afterMethod(ITestResult result) {
+        try {
+            logReportDetails(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    @Test (description = "Validating the user login API")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Login")
     public void validateUserLogin() {
         String randomEmail = randomData.generateRandomEmail("gmail.com");
         UserData validUser = userDataProvider.getData("validUser", UserData.class);
@@ -36,4 +53,5 @@ public class UserLoginTest extends BaseTest {
         loginResponseBody.assertLoginResponse(randomEmail);
 
     }
+
 }
