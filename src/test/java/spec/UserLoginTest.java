@@ -1,5 +1,8 @@
+package spec;
+
 import clients.UserClient;
 import io.qameta.allure.*;
+import models.LoginResponseBody;
 import models.SignupResponseBody;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -9,7 +12,8 @@ import testData.UserData;
 import utilities.DataProvider;
 import utilities.RandomData;
 
-public class UserSignUp extends BaseTest {
+
+public class UserLoginTest extends BaseTest {
 
     private UserClient userClient;
     private RandomData randomData;
@@ -19,8 +23,9 @@ public class UserSignUp extends BaseTest {
     @BeforeClass
     public void beforeClass() {
         userClient = new UserClient();
-        userDataProvider = new DataProvider("src/main/java/testData/userData.json");
         randomData = new RandomData(42);
+        userDataProvider = new DataProvider("src/main/java/testData/userData.json");
+
     }
 
     @AfterMethod
@@ -33,22 +38,22 @@ public class UserSignUp extends BaseTest {
     }
 
 
-    @Test (description = "Validating the user signup API")
+
+    @Test (description = "Validating the user login API")
     @Severity(SeverityLevel.NORMAL)
-    @Feature("Signup")
-    public void validateUserSignUp() {
-
-
+    @Feature("Login")
+    public void validateUserLogin() {
         String randomEmail = randomData.generateRandomEmail("gmail.com");
-
-        String password = userDataProvider.getData("validUser", UserData.class).getPassword();
-
+        UserData validUser = userDataProvider.getData("validUser", UserData.class);
+        String password = validUser.getPassword();
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
+        String accessToken = signupResponseBody.getData().getSession().getAccessToken();
 
-        signupResponseBody.assertSignupResponse(randomEmail);
+        LoginResponseBody loginResponseBody = userClient.login(randomEmail, password, accessToken);
+
+        loginResponseBody.assertLoginResponse(randomEmail);
 
     }
-
 
 }
