@@ -221,3 +221,25 @@
 14:55:46.416 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
 14:59:38.811 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
 14:59:38.812 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+18:42:34.848 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+18:42:34.849 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+18:42:40.476 [ApplicationImpl pooled thread 935] INFO  c.b.l.BrowserStackRunExtension - testng
+18:42:40.476 [ApplicationImpl pooled thread 935] INFO  com.browserstack.utils.Helpers - null
+18:42:40.489 [ApplicationImpl pooled thread 935] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+18:45:22.321 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+18:45:22.322 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+18:45:52.190 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+18:45:52.190 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+19:25:07.576 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+19:25:07.577 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+19:32:22.157 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+19:32:22.158 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+19:32:25.795 [ApplicationImpl pooled thread 952] INFO  c.b.l.BrowserStackRunExtension - testng
+19:32:25.795 [ApplicationImpl pooled thread 952] INFO  com.browserstack.utils.Helpers - null
+19:32:25.805 [ApplicationImpl pooled thread 952] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+21:52:02.399 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+21:52:02.401 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+21:52:19.912 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+21:52:19.912 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null
+21:57:27.475 [AWT-EventQueue-0] INFO  c.b.l.BrowserStackRunExtension - gradle
+21:57:27.476 [AWT-EventQueue-0] INFO  com.browserstack.utils.Helpers - null

@@ -1,3 +1,5 @@
+package spec;
+
 import io.qameta.allure.Allure;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
