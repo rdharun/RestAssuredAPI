@@ -1,21 +1,22 @@
 package spec;
 
-import io.qameta.allure.Allure;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import utilities.AllureLogger;
-import utilities.LogUtility;
 import utilities.PropertyUtils;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 
 public class BaseTest {
 
-    private long startTime;
+    private static final Logger logger = LogManager.getLogger(BaseTest.class);
+
 
     @BeforeTest
     public void setUp() {
@@ -28,23 +29,18 @@ public class BaseTest {
         // Any teardown logic you want to add
     }
 
+    @AfterMethod
+    public void afterMethod(ITestResult result) {
 
-    public void logReportDetails(ITestResult result) {
-        try {
-            if (result.getStatus() == ITestResult.FAILURE) {
-                // Capture logs for failed tests
-                String logs = LogUtility.captureLogs(result.getThrowable());
-                AllureLogger.addLogsToAllureReport(logs, result.getThrowable());
+        if (result.getStatus() == ITestResult.FAILURE) {
+            Throwable t = result.getThrowable();
 
-                // Add key steps logs for diagnostic capability
-                // Example: Allure.addAttachment("Key Steps", "text/plain", "Step 1: Perform action X\nStep 2: Verify result Y");
-            }
+            StringWriter error = new StringWriter();
+            t.printStackTrace(new PrintWriter(error));
 
-            // Add execution time to the report
-            long executionTime = System.currentTimeMillis() - startTime;
-            Allure.addAttachment("Execution Time", "text/plain", "Execution time: " + executionTime + " ms");
-        } catch (Exception e) {
-            e.printStackTrace();
+            logger.info(error.toString());
         }
+
     }
+
 }

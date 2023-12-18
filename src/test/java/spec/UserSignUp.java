@@ -3,8 +3,6 @@ package spec;
 import clients.UserClient;
 import io.qameta.allure.*;
 import models.SignupResponseBody;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import testData.UserData;
@@ -27,16 +25,6 @@ public class UserSignUp extends BaseTest {
         randomData = threadLocalRandomData.get();
         userDataProvider = threadLocalUserDataProvider.get();
     }
-
-    @AfterMethod
-    public void afterMethod(ITestResult result) {
-        try {
-            logReportDetails(result);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
 
     @Test(description = "Validating the user signup API")
     @Severity(SeverityLevel.NORMAL)
