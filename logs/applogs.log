@@ -2064,3 +2064,610 @@
     }
 }
 2023-12-18T17:36:33,337 [Test worker] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended
+2023-12-18T17:52:09,582 [Test worker] ERROR (PropertyUtils.java:19) - Failed to load environment-specific properties file
+java.io.FileNotFoundException: src/test/resources/dev.properties (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:216) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:157) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:111) ~[?:?]
+	at utilities.PropertyUtils.getProperty(PropertyUtils.java:16) [test/:?]
+	at spec.BaseTest.setUp(BaseTest.java:24) [test/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) [testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [testng-7.8.0.jar:7.8.0]
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:145) [gradle-testing-jvm-infrastructure-8.2.jar:8.2]
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:92) [gradle-testing-jvm-infrastructure-8.2.jar:8.2]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.2.jar:8.2]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.2.jar:8.2]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.2.jar:8.2]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.2.jar:8.2]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.2.jar:8.2]
+	at jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.2.jar:8.2]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.2.jar:8.2]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.2.jar:8.2]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.2.jar:8.2]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.2.jar:8.2]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.2.jar:8.2]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.2.jar:8.2]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+2023-12-18T17:53:01,226 [Test worker] INFO  (UserLoginTest.java:42) - validateUserLogin test execution started
+2023-12-18T17:53:04,756 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"tom.nicolas@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "tom.nicolas@gmail.com",
+            "email_confirmed_at": "2023-12-18T12:23:04.561742212Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T12:23:04.564125459Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "0358e432-6ba2-45a7-a536-eba19e377fc1",
+                    "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                    "user_id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                    "identity_data": {
+                        "email": "tom.nicolas@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "9917efb6-f44e-498c-b4c5-f03c85f4537d"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T12:23:04.560381043Z",
+                    "created_at": "2023-12-18T12:23:04.560426Z",
+                    "updated_at": "2023-12-18T12:23:04.560426Z",
+                    "email": "tom.nicolas@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T12:23:04.558271Z",
+            "updated_at": "2023-12-18T12:23:04.565786Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA1Nzg0LCJpYXQiOjE3MDI5MDIxODQsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijk5MTdlZmI2LWY0NGUtNDk4Yy1iNGM1LWYwM2M4NWY0NTM3ZCIsImVtYWlsIjoidG9tLm5pY29sYXNAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3MDI5MDIxODR9XSwic2Vzc2lvbl9pZCI6IjU2YmFhNTkxLTdiZjctNGU1OC1iMWQ3LTFlZTU0ZDJlMTdmNCJ9.EtR-rIzFaumtP0HTAnsfP3-UrU1KouNiGwpjEMqYZf0",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702905785,
+            "refresh_token": "Nqm2cbYUBnW7OPJUhPe6QA",
+            "user": {
+                "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "tom.nicolas@gmail.com",
+                "email_confirmed_at": "2023-12-18T12:23:04.561742212Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T12:23:04.564125459Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "0358e432-6ba2-45a7-a536-eba19e377fc1",
+                        "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                        "user_id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                        "identity_data": {
+                            "email": "tom.nicolas@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "9917efb6-f44e-498c-b4c5-f03c85f4537d"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T12:23:04.560381043Z",
+                        "created_at": "2023-12-18T12:23:04.560426Z",
+                        "updated_at": "2023-12-18T12:23:04.560426Z",
+                        "email": "tom.nicolas@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T12:23:04.558271Z",
+                "updated_at": "2023-12-18T12:23:04.565786Z"
+            }
+        }
+    }
+}
+2023-12-18T17:53:05,344 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/login
+ Request body {"password":"123456","email":"tom.nicolas@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "tom.nicolas@gmail.com",
+            "email_confirmed_at": "2023-12-18T12:23:04.561742Z",
+            "phone": "",
+            "confirmed_at": "2023-12-18T12:23:04.561742Z",
+            "last_sign_in_at": "2023-12-18T12:23:05.336023158Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "0358e432-6ba2-45a7-a536-eba19e377fc1",
+                    "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                    "user_id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                    "identity_data": {
+                        "email": "tom.nicolas@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "9917efb6-f44e-498c-b4c5-f03c85f4537d"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T12:23:04.560381Z",
+                    "created_at": "2023-12-18T12:23:04.560426Z",
+                    "updated_at": "2023-12-18T12:23:04.560426Z",
+                    "email": "tom.nicolas@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T12:23:04.558271Z",
+            "updated_at": "2023-12-18T12:23:05.33757Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA1Nzg1LCJpYXQiOjE3MDI5MDIxODUsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijk5MTdlZmI2LWY0NGUtNDk4Yy1iNGM1LWYwM2M4NWY0NTM3ZCIsImVtYWlsIjoidG9tLm5pY29sYXNAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3MDI5MDIxODV9XSwic2Vzc2lvbl9pZCI6ImFiNjY3YTI2LTUxMWMtNDk3Ni04YWRlLWQyN2ZiN2M2NzU5ZiJ9.9O0vlVJhsN_X4o4Iz4s7CvSH1DbXE-aIRFthZDq-aWE",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702905785,
+            "refresh_token": "Oxf9Gncq6vMkScq1V2gvGQ",
+            "user": {
+                "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "tom.nicolas@gmail.com",
+                "email_confirmed_at": "2023-12-18T12:23:04.561742Z",
+                "phone": "",
+                "confirmed_at": "2023-12-18T12:23:04.561742Z",
+                "last_sign_in_at": "2023-12-18T12:23:05.336023158Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "0358e432-6ba2-45a7-a536-eba19e377fc1",
+                        "id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                        "user_id": "9917efb6-f44e-498c-b4c5-f03c85f4537d",
+                        "identity_data": {
+                            "email": "tom.nicolas@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "9917efb6-f44e-498c-b4c5-f03c85f4537d"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T12:23:04.560381Z",
+                        "created_at": "2023-12-18T12:23:04.560426Z",
+                        "updated_at": "2023-12-18T12:23:04.560426Z",
+                        "email": "tom.nicolas@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T12:23:04.558271Z",
+                "updated_at": "2023-12-18T12:23:05.33757Z"
+            }
+        }
+    }
+}
+2023-12-18T17:53:05,368 [Test worker] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended
+2023-12-18T17:53:16,010 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"dale.beer@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "529f2864-7c55-4bfa-b792-63597954eb90",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "dale.beer@gmail.com",
+            "email_confirmed_at": "2023-12-18T12:23:15.919766707Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T12:23:15.922673588Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "df5fa087-4e29-4fed-80d9-5f441bc7e190",
+                    "id": "529f2864-7c55-4bfa-b792-63597954eb90",
+                    "user_id": "529f2864-7c55-4bfa-b792-63597954eb90",
+                    "identity_data": {
+                        "email": "dale.beer@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "529f2864-7c55-4bfa-b792-63597954eb90"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T12:23:15.918554994Z",
+                    "created_at": "2023-12-18T12:23:15.918603Z",
+                    "updated_at": "2023-12-18T12:23:15.918603Z",
+                    "email": "dale.beer@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T12:23:15.916523Z",
+            "updated_at": "2023-12-18T12:23:15.92425Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA1Nzk1LCJpYXQiOjE3MDI5MDIxOTUsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjUyOWYyODY0LTdjNTUtNGJmYS1iNzkyLTYzNTk3OTU0ZWI5MCIsImVtYWlsIjoiZGFsZS5iZWVyQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnt9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzAyOTAyMTk1fV0sInNlc3Npb25faWQiOiJkMDJhY2UzOC00OWJkLTQ0YmUtODc3Yi01MzdhNWQ4ZDA4YjkifQ.ofmuz5ILmSTmXyKZdXZvXpckLLR5kTFLdeDq2biQdDA",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702905796,
+            "refresh_token": "fqCV_5gbALzxLPy3dRlWhQ",
+            "user": {
+                "id": "529f2864-7c55-4bfa-b792-63597954eb90",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "dale.beer@gmail.com",
+                "email_confirmed_at": "2023-12-18T12:23:15.919766707Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T12:23:15.922673588Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "df5fa087-4e29-4fed-80d9-5f441bc7e190",
+                        "id": "529f2864-7c55-4bfa-b792-63597954eb90",
+                        "user_id": "529f2864-7c55-4bfa-b792-63597954eb90",
+                        "identity_data": {
+                            "email": "dale.beer@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "529f2864-7c55-4bfa-b792-63597954eb90"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T12:23:15.918554994Z",
+                        "created_at": "2023-12-18T12:23:15.918603Z",
+                        "updated_at": "2023-12-18T12:23:15.918603Z",
+                        "email": "dale.beer@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T12:23:15.916523Z",
+                "updated_at": "2023-12-18T12:23:15.92425Z"
+            }
+        }
+    }
+}
+2023-12-18T19:41:30,854 [main] INFO  (Logger.java:112) - [TestNG] Running:
+  /Users/testvagrant_1/Desktop/Intellij workspace/RestAssuredAPI/src/test/testng.xml
+
+2023-12-18T19:41:31,795 [TestNG-test=Test-1] INFO  (UserLoginTest.java:42) - validateUserLogin test execution started
+2023-12-18T19:41:36,243 [TestNG-test=Test-2] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"camelia.hilpert@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "08aabe8a-a751-475f-acba-27694a94275e",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "camelia.hilpert@gmail.com",
+            "email_confirmed_at": "2023-12-18T14:11:36.180658941Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T14:11:36.183465021Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "98447790-946e-4e0c-a144-1f81e3c0b9e8",
+                    "id": "08aabe8a-a751-475f-acba-27694a94275e",
+                    "user_id": "08aabe8a-a751-475f-acba-27694a94275e",
+                    "identity_data": {
+                        "email": "camelia.hilpert@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "08aabe8a-a751-475f-acba-27694a94275e"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T14:11:36.178933046Z",
+                    "created_at": "2023-12-18T14:11:36.179009Z",
+                    "updated_at": "2023-12-18T14:11:36.179009Z",
+                    "email": "camelia.hilpert@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T14:11:36.17636Z",
+            "updated_at": "2023-12-18T14:11:36.185562Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTEyMjk2LCJpYXQiOjE3MDI5MDg2OTYsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjA4YWFiZThhLWE3NTEtNDc1Zi1hY2JhLTI3Njk0YTk0Mjc1ZSIsImVtYWlsIjoiY2FtZWxpYS5oaWxwZXJ0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnt9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzAyOTA4Njk2fV0sInNlc3Npb25faWQiOiJkNTU0NmVmNC1lMmYyLTQ4ZTQtYTA2ZC1iOWZkNTdkMGNkNTcifQ.8yeNffFnDmlSLG2zxTJv9psQov8kDbRTaGASLbh1ulA",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702912296,
+            "refresh_token": "Cl5I4pJ0NftPhz4az5KcDA",
+            "user": {
+                "id": "08aabe8a-a751-475f-acba-27694a94275e",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "camelia.hilpert@gmail.com",
+                "email_confirmed_at": "2023-12-18T14:11:36.180658941Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T14:11:36.183465021Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "98447790-946e-4e0c-a144-1f81e3c0b9e8",
+                        "id": "08aabe8a-a751-475f-acba-27694a94275e",
+                        "user_id": "08aabe8a-a751-475f-acba-27694a94275e",
+                        "identity_data": {
+                            "email": "camelia.hilpert@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "08aabe8a-a751-475f-acba-27694a94275e"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T14:11:36.178933046Z",
+                        "created_at": "2023-12-18T14:11:36.179009Z",
+                        "updated_at": "2023-12-18T14:11:36.179009Z",
+                        "email": "camelia.hilpert@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T14:11:36.17636Z",
+                "updated_at": "2023-12-18T14:11:36.185562Z"
+            }
+        }
+    }
+}
+2023-12-18T19:41:36,244 [TestNG-test=Test-1] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"sharon.wolff@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "sharon.wolff@gmail.com",
+            "email_confirmed_at": "2023-12-18T14:11:36.166854304Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T14:11:36.169426194Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "8c38508e-3649-437f-a2e6-35021b054d62",
+                    "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                    "user_id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                    "identity_data": {
+                        "email": "sharon.wolff@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T14:11:36.165277603Z",
+                    "created_at": "2023-12-18T14:11:36.165325Z",
+                    "updated_at": "2023-12-18T14:11:36.165325Z",
+                    "email": "sharon.wolff@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T14:11:36.163183Z",
+            "updated_at": "2023-12-18T14:11:36.170927Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTEyMjk2LCJpYXQiOjE3MDI5MDg2OTYsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6ImJjYzUzYWEwLWRmYzAtNGNmYi1iMThkLWRhOTQ4MGNkZWRhNSIsImVtYWlsIjoic2hhcm9uLndvbGZmQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnt9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzAyOTA4Njk2fV0sInNlc3Npb25faWQiOiJmZjQwODYzNi1jNmRjLTQzNzktYWI1MS1lNGI4ZmIyNmRlNjAifQ.DY5HMFT0HxJtWVK1vzjbDGoZhAo-zJHpCWTxqrCGYY4",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702912296,
+            "refresh_token": "Sb6jkQaDwQMybSPeULrsyA",
+            "user": {
+                "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "sharon.wolff@gmail.com",
+                "email_confirmed_at": "2023-12-18T14:11:36.166854304Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T14:11:36.169426194Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "8c38508e-3649-437f-a2e6-35021b054d62",
+                        "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                        "user_id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                        "identity_data": {
+                            "email": "sharon.wolff@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T14:11:36.165277603Z",
+                        "created_at": "2023-12-18T14:11:36.165325Z",
+                        "updated_at": "2023-12-18T14:11:36.165325Z",
+                        "email": "sharon.wolff@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T14:11:36.163183Z",
+                "updated_at": "2023-12-18T14:11:36.170927Z"
+            }
+        }
+    }
+}
+2023-12-18T19:41:37,000 [TestNG-test=Test-1] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/login
+ Request body {"password":"123456","email":"sharon.wolff@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "sharon.wolff@gmail.com",
+            "email_confirmed_at": "2023-12-18T14:11:36.166854Z",
+            "phone": "",
+            "confirmed_at": "2023-12-18T14:11:36.166854Z",
+            "last_sign_in_at": "2023-12-18T14:11:36.945884992Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "8c38508e-3649-437f-a2e6-35021b054d62",
+                    "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                    "user_id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                    "identity_data": {
+                        "email": "sharon.wolff@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T14:11:36.165277Z",
+                    "created_at": "2023-12-18T14:11:36.165325Z",
+                    "updated_at": "2023-12-18T14:11:36.165325Z",
+                    "email": "sharon.wolff@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T14:11:36.163183Z",
+            "updated_at": "2023-12-18T14:11:36.947625Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTEyMjk2LCJpYXQiOjE3MDI5MDg2OTYsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6ImJjYzUzYWEwLWRmYzAtNGNmYi1iMThkLWRhOTQ4MGNkZWRhNSIsImVtYWlsIjoic2hhcm9uLndvbGZmQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnt9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzAyOTA4Njk2fV0sInNlc3Npb25faWQiOiI2NzAzZjhjOC00NjQ0LTQ1MjQtODAzMC1jOTkyYzVlYWZmOTMifQ.LSF6MZQvfsm9RUXLoXGHLOoXAu2SdEPFsayR243Pvrk",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702912297,
+            "refresh_token": "dWvkUgX177yibgSezSutsw",
+            "user": {
+                "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "sharon.wolff@gmail.com",
+                "email_confirmed_at": "2023-12-18T14:11:36.166854Z",
+                "phone": "",
+                "confirmed_at": "2023-12-18T14:11:36.166854Z",
+                "last_sign_in_at": "2023-12-18T14:11:36.945884992Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "8c38508e-3649-437f-a2e6-35021b054d62",
+                        "id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                        "user_id": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5",
+                        "identity_data": {
+                            "email": "sharon.wolff@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "bcc53aa0-dfc0-4cfb-b18d-da9480cdeda5"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T14:11:36.165277Z",
+                        "created_at": "2023-12-18T14:11:36.165325Z",
+                        "updated_at": "2023-12-18T14:11:36.165325Z",
+                        "email": "sharon.wolff@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T14:11:36.163183Z",
+                "updated_at": "2023-12-18T14:11:36.947625Z"
+            }
+        }
+    }
+}
+2023-12-18T19:41:37,021 [TestNG-test=Test-1] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended
