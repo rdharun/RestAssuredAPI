@@ -1,0 +1,203 @@
+2023-12-18T15:31:34,775 [Test worker] INFO  (RestAssuredListener.java:22) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"daren.dicki@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "2695d41c-38a7-431b-87bd-6cdca41ab8b2",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "daren.dicki@gmail.com",
+            "email_confirmed_at": "2023-12-18T10:01:34.538319072Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T10:01:34.541055014Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "4b4b9b53-40e6-4673-8303-53c3786cb1bd",
+                    "id": "2695d41c-38a7-431b-87bd-6cdca41ab8b2",
+                    "user_id": "2695d41c-38a7-431b-87bd-6cdca41ab8b2",
+                    "identity_data": {
+                        "email": "daren.dicki@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "2695d41c-38a7-431b-87bd-6cdca41ab8b2"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T10:01:34.536085167Z",
+                    "created_at": "2023-12-18T10:01:34.536133Z",
+                    "updated_at": "2023-12-18T10:01:34.536133Z",
+                    "email": "daren.dicki@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T10:01:34.532669Z",
+            "updated_at": "2023-12-18T10:01:34.542719Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyODk3Mjk0LCJpYXQiOjE3MDI4OTM2OTQsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjI2OTVkNDFjLTM4YTctNDMxYi04N2JkLTZjZGNhNDFhYjhiMiIsImVtYWlsIjoiZGFyZW4uZGlja2lAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3MDI4OTM2OTR9XSwic2Vzc2lvbl9pZCI6IjE1NmI1YjhlLWEwZDMtNDcxNy1hZjYxLTM4YjMxMmY4NjI1OSJ9.IfIuxJP6NMY7ossoZ_UoED9F08pMamBcWJzJBnjHMus",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702897295,
+            "refresh_token": "5H6zKPoFVFYfG23J-nifXQ",
+            "user": {
+                "id": "2695d41c-38a7-431b-87bd-6cdca41ab8b2",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "daren.dicki@gmail.com",
+                "email_confirmed_at": "2023-12-18T10:01:34.538319072Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T10:01:34.541055014Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "4b4b9b53-40e6-4673-8303-53c3786cb1bd",
+                        "id": "2695d41c-38a7-431b-87bd-6cdca41ab8b2",
+                        "user_id": "2695d41c-38a7-431b-87bd-6cdca41ab8b2",
+                        "identity_data": {
+                            "email": "daren.dicki@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "2695d41c-38a7-431b-87bd-6cdca41ab8b2"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T10:01:34.536085167Z",
+                        "created_at": "2023-12-18T10:01:34.536133Z",
+                        "updated_at": "2023-12-18T10:01:34.536133Z",
+                        "email": "daren.dicki@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T10:01:34.532669Z",
+                "updated_at": "2023-12-18T10:01:34.542719Z"
+            }
+        }
+    }
+}
+2023-12-18T15:31:34,917 [Test worker] INFO  (BaseTest.java:41) - java.lang.AssertionError: Invalid status code expected [200] but found [201]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at models.SignupResponseBody.assertSignupResponse(SignupResponseBody.java:118)
+	at spec.UserSignUp.validateUserSignUp(UserSignUp.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:145)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:92)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+2023-12-18T15:37:41,198 [Test worker] INFO  (BaseTest.java:41) - java.lang.AssertionError: Invalid status code expected [200] but found [201]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at models.SignupResponseBody.assertSignupResponse(SignupResponseBody.java:118)
+	at spec.UserSignUp.validateUserSignUp(UserSignUp.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:145)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:92)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+

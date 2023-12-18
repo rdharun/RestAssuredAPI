@@ -117,7 +117,7 @@ public class LoginResponseBody {
     }
 
     public void assertLoginResponse(String email) {
-        assertEquals(this.getStatusCode(), 200, "Status code is not valid");
+        assertEquals(this.getStatusCode(), 201, "Status code is not valid");
         assertEquals(this.getData().getUser().getEmail(), email, "Email is not matching");
         assertNotNull(this.getData().getSession().getAccessToken(), "Access token should not be null");
     }
