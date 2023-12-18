@@ -1073,3 +1073,994 @@
     }
 }
 2023-12-18T16:18:28,878 [TestNG-test=Test-1] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended
+2023-12-18T16:48:42,531 [main] INFO  (Logger.java:112) - [TestNG] Running:
+  /Users/testvagrant_1/Desktop/Intellij workspace/RestAssuredAPI/src/test/testng.xml
+
+2023-12-18T16:48:43,691 [TestNG-test=Test-1] INFO  (UserLoginTest.java:42) - validateUserLogin test execution started
+2023-12-18T16:48:47,005 [TestNG-test=Test-1] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"pennie.mcclure@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "pennie.mcclure@gmail.com",
+            "email_confirmed_at": "2023-12-18T11:18:46.868873312Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T11:18:46.871202272Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "19d538d9-ce1a-497c-b930-c839ce2a3626",
+                    "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                    "user_id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                    "identity_data": {
+                        "email": "pennie.mcclure@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "51f7acb2-f644-41de-87a2-a1a8271f2cec"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T11:18:46.867320325Z",
+                    "created_at": "2023-12-18T11:18:46.867377Z",
+                    "updated_at": "2023-12-18T11:18:46.867377Z",
+                    "email": "pennie.mcclure@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T11:18:46.864713Z",
+            "updated_at": "2023-12-18T11:18:46.872549Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTAxOTI2LCJpYXQiOjE3MDI4OTgzMjYsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjUxZjdhY2IyLWY2NDQtNDFkZS04N2EyLWExYTgyNzFmMmNlYyIsImVtYWlsIjoicGVubmllLm1jY2x1cmVAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3MDI4OTgzMjZ9XSwic2Vzc2lvbl9pZCI6Ijg2YTg0YjgzLWMwNGYtNGJhMS05ZjI1LWQzZTQ3ZDFiNmE3YiJ9.e6QuAivuJTh58syWeGCSGQZOGyMz6xzBaHENEHKNZDU",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702901927,
+            "refresh_token": "uix5UzmvPcOMZpuDL4lSqw",
+            "user": {
+                "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "pennie.mcclure@gmail.com",
+                "email_confirmed_at": "2023-12-18T11:18:46.868873312Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T11:18:46.871202272Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "19d538d9-ce1a-497c-b930-c839ce2a3626",
+                        "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                        "user_id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                        "identity_data": {
+                            "email": "pennie.mcclure@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "51f7acb2-f644-41de-87a2-a1a8271f2cec"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T11:18:46.867320325Z",
+                        "created_at": "2023-12-18T11:18:46.867377Z",
+                        "updated_at": "2023-12-18T11:18:46.867377Z",
+                        "email": "pennie.mcclure@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T11:18:46.864713Z",
+                "updated_at": "2023-12-18T11:18:46.872549Z"
+            }
+        }
+    }
+}
+2023-12-18T16:48:47,005 [TestNG-test=Test-2] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"mathilde.wilderman@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "18f41421-972d-417f-a9a4-6187cb2c3538",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "mathilde.wilderman@gmail.com",
+            "email_confirmed_at": "2023-12-18T11:18:46.850076801Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T11:18:46.852687918Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "a6678ec6-3b8d-4ab4-bd6d-9cac06a12dda",
+                    "id": "18f41421-972d-417f-a9a4-6187cb2c3538",
+                    "user_id": "18f41421-972d-417f-a9a4-6187cb2c3538",
+                    "identity_data": {
+                        "email": "mathilde.wilderman@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "18f41421-972d-417f-a9a4-6187cb2c3538"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T11:18:46.848872399Z",
+                    "created_at": "2023-12-18T11:18:46.848915Z",
+                    "updated_at": "2023-12-18T11:18:46.848915Z",
+                    "email": "mathilde.wilderman@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T11:18:46.846739Z",
+            "updated_at": "2023-12-18T11:18:46.854301Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTAxOTI2LCJpYXQiOjE3MDI4OTgzMjYsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjE4ZjQxNDIxLTk3MmQtNDE3Zi1hOWE0LTYxODdjYjJjMzUzOCIsImVtYWlsIjoibWF0aGlsZGUud2lsZGVybWFuQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnt9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzAyODk4MzI2fV0sInNlc3Npb25faWQiOiI2Mzg3YTZkMS0yYjA1LTQwMzYtYjQwNC00ZjQ5MTFiNjNjN2QifQ.vrbKRojwuU2y3EB7MbsQRkYuqHz45h6hAyP1Efk0jmI",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702901927,
+            "refresh_token": "ovlSKSmxai3_dIbC2ojcjQ",
+            "user": {
+                "id": "18f41421-972d-417f-a9a4-6187cb2c3538",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "mathilde.wilderman@gmail.com",
+                "email_confirmed_at": "2023-12-18T11:18:46.850076801Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T11:18:46.852687918Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "a6678ec6-3b8d-4ab4-bd6d-9cac06a12dda",
+                        "id": "18f41421-972d-417f-a9a4-6187cb2c3538",
+                        "user_id": "18f41421-972d-417f-a9a4-6187cb2c3538",
+                        "identity_data": {
+                            "email": "mathilde.wilderman@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "18f41421-972d-417f-a9a4-6187cb2c3538"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T11:18:46.848872399Z",
+                        "created_at": "2023-12-18T11:18:46.848915Z",
+                        "updated_at": "2023-12-18T11:18:46.848915Z",
+                        "email": "mathilde.wilderman@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T11:18:46.846739Z",
+                "updated_at": "2023-12-18T11:18:46.854301Z"
+            }
+        }
+    }
+}
+2023-12-18T16:48:47,562 [TestNG-test=Test-1] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/login
+ Request body {"password":"123456","email":"pennie.mcclure@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "pennie.mcclure@gmail.com",
+            "email_confirmed_at": "2023-12-18T11:18:46.868873Z",
+            "phone": "",
+            "confirmed_at": "2023-12-18T11:18:46.868873Z",
+            "last_sign_in_at": "2023-12-18T11:18:47.548753663Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "19d538d9-ce1a-497c-b930-c839ce2a3626",
+                    "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                    "user_id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                    "identity_data": {
+                        "email": "pennie.mcclure@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "51f7acb2-f644-41de-87a2-a1a8271f2cec"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T11:18:46.86732Z",
+                    "created_at": "2023-12-18T11:18:46.867377Z",
+                    "updated_at": "2023-12-18T11:18:46.867377Z",
+                    "email": "pennie.mcclure@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T11:18:46.864713Z",
+            "updated_at": "2023-12-18T11:18:47.550629Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTAxOTI3LCJpYXQiOjE3MDI4OTgzMjcsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjUxZjdhY2IyLWY2NDQtNDFkZS04N2EyLWExYTgyNzFmMmNlYyIsImVtYWlsIjoicGVubmllLm1jY2x1cmVAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3MDI4OTgzMjd9XSwic2Vzc2lvbl9pZCI6IjQ3YjllOGIyLTRiOWQtNDJmMi05YWZlLTEyNjZlZjc4MDk5ZSJ9.DyWhnch7t_fGdo1AVjRbdU5fxK3GNkbiHJiSqq-bjBo",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702901928,
+            "refresh_token": "RPx4YmhEWGIo8fQ_MFweqg",
+            "user": {
+                "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "pennie.mcclure@gmail.com",
+                "email_confirmed_at": "2023-12-18T11:18:46.868873Z",
+                "phone": "",
+                "confirmed_at": "2023-12-18T11:18:46.868873Z",
+                "last_sign_in_at": "2023-12-18T11:18:47.548753663Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "19d538d9-ce1a-497c-b930-c839ce2a3626",
+                        "id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                        "user_id": "51f7acb2-f644-41de-87a2-a1a8271f2cec",
+                        "identity_data": {
+                            "email": "pennie.mcclure@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "51f7acb2-f644-41de-87a2-a1a8271f2cec"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T11:18:46.86732Z",
+                        "created_at": "2023-12-18T11:18:46.867377Z",
+                        "updated_at": "2023-12-18T11:18:46.867377Z",
+                        "email": "pennie.mcclure@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T11:18:46.864713Z",
+                "updated_at": "2023-12-18T11:18:47.550629Z"
+            }
+        }
+    }
+}
+2023-12-18T16:48:47,577 [TestNG-test=Test-1] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended
+2023-12-18T16:51:03,017 [Test worker] INFO  (UserLoginTest.java:42) - validateUserLogin test execution started
+2023-12-18T16:51:05,009 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"addie.stracke@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "052d4461-2018-454c-bfdb-077aad184f24",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "addie.stracke@gmail.com",
+            "email_confirmed_at": "2023-12-18T11:21:04.922154444Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T11:21:04.924563567Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "a616c14b-47ee-4568-9438-2461b01e4f23",
+                    "id": "052d4461-2018-454c-bfdb-077aad184f24",
+                    "user_id": "052d4461-2018-454c-bfdb-077aad184f24",
+                    "identity_data": {
+                        "email": "addie.stracke@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "052d4461-2018-454c-bfdb-077aad184f24"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T11:21:04.920880594Z",
+                    "created_at": "2023-12-18T11:21:04.920925Z",
+                    "updated_at": "2023-12-18T11:21:04.920925Z",
+                    "email": "addie.stracke@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T11:21:04.918883Z",
+            "updated_at": "2023-12-18T11:21:04.926178Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTAyMDY0LCJpYXQiOjE3MDI4OTg0NjQsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjA1MmQ0NDYxLTIwMTgtNDU0Yy1iZmRiLTA3N2FhZDE4NGYyNCIsImVtYWlsIjoiYWRkaWUuc3RyYWNrZUBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7fSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTcwMjg5ODQ2NH1dLCJzZXNzaW9uX2lkIjoiYzlhNDlkZTctYjNkMC00MTg2LTllY2QtMTliYTFhMjBmZTk3In0.xRMt8yNAYU9RSkAwJP3TjEBVx7YCQNhZJI55Q8xAV8g",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702902065,
+            "refresh_token": "SPXad10mgauWFEGXBPTZ5w",
+            "user": {
+                "id": "052d4461-2018-454c-bfdb-077aad184f24",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "addie.stracke@gmail.com",
+                "email_confirmed_at": "2023-12-18T11:21:04.922154444Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T11:21:04.924563567Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "a616c14b-47ee-4568-9438-2461b01e4f23",
+                        "id": "052d4461-2018-454c-bfdb-077aad184f24",
+                        "user_id": "052d4461-2018-454c-bfdb-077aad184f24",
+                        "identity_data": {
+                            "email": "addie.stracke@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "052d4461-2018-454c-bfdb-077aad184f24"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T11:21:04.920880594Z",
+                        "created_at": "2023-12-18T11:21:04.920925Z",
+                        "updated_at": "2023-12-18T11:21:04.920925Z",
+                        "email": "addie.stracke@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T11:21:04.918883Z",
+                "updated_at": "2023-12-18T11:21:04.926178Z"
+            }
+        }
+    }
+}
+2023-12-18T16:51:05,599 [Test worker] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended
+2023-12-18T17:23:33,233 [Test worker] INFO  (UserLoginTest.java:42) - validateUserLogin test execution started
+2023-12-18T17:23:36,053 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"daria.monahan@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "daria.monahan@gmail.com",
+            "email_confirmed_at": "2023-12-18T11:53:35.939505797Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T11:53:35.942091372Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "03cb9408-be4a-40f6-9525-20c884a67958",
+                    "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                    "user_id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                    "identity_data": {
+                        "email": "daria.monahan@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "4243655c-9697-4570-bda5-6ab1f197bda1"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T11:53:35.938154688Z",
+                    "created_at": "2023-12-18T11:53:35.938198Z",
+                    "updated_at": "2023-12-18T11:53:35.938198Z",
+                    "email": "daria.monahan@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T11:53:35.935994Z",
+            "updated_at": "2023-12-18T11:53:35.944155Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA0MDE1LCJpYXQiOjE3MDI5MDA0MTUsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjQyNDM2NTVjLTk2OTctNDU3MC1iZGE1LTZhYjFmMTk3YmRhMSIsImVtYWlsIjoiZGFyaWEubW9uYWhhbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7fSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTcwMjkwMDQxNX1dLCJzZXNzaW9uX2lkIjoiOWIwYWI1YjItNzkxNS00M2M4LTkwOTEtY2QzYTdmYmMyOGNjIn0.GQFUBh9uGbNPeV-ZQEvmpQzsmT4o_Gv52dsSxQ-QxqA",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702904016,
+            "refresh_token": "M1MABVNz3gy7Q0UD2zlmJQ",
+            "user": {
+                "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "daria.monahan@gmail.com",
+                "email_confirmed_at": "2023-12-18T11:53:35.939505797Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T11:53:35.942091372Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "03cb9408-be4a-40f6-9525-20c884a67958",
+                        "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                        "user_id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                        "identity_data": {
+                            "email": "daria.monahan@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "4243655c-9697-4570-bda5-6ab1f197bda1"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T11:53:35.938154688Z",
+                        "created_at": "2023-12-18T11:53:35.938198Z",
+                        "updated_at": "2023-12-18T11:53:35.938198Z",
+                        "email": "daria.monahan@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T11:53:35.935994Z",
+                "updated_at": "2023-12-18T11:53:35.944155Z"
+            }
+        }
+    }
+}
+2023-12-18T17:23:36,684 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/login
+ Request body {"password":"123456","email":"daria.monahan@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "daria.monahan@gmail.com",
+            "email_confirmed_at": "2023-12-18T11:53:35.939505Z",
+            "phone": "",
+            "confirmed_at": "2023-12-18T11:53:35.939505Z",
+            "last_sign_in_at": "2023-12-18T11:53:36.666427824Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "03cb9408-be4a-40f6-9525-20c884a67958",
+                    "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                    "user_id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                    "identity_data": {
+                        "email": "daria.monahan@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "4243655c-9697-4570-bda5-6ab1f197bda1"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T11:53:35.938154Z",
+                    "created_at": "2023-12-18T11:53:35.938198Z",
+                    "updated_at": "2023-12-18T11:53:35.938198Z",
+                    "email": "daria.monahan@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T11:53:35.935994Z",
+            "updated_at": "2023-12-18T11:53:36.667955Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA0MDE2LCJpYXQiOjE3MDI5MDA0MTYsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjQyNDM2NTVjLTk2OTctNDU3MC1iZGE1LTZhYjFmMTk3YmRhMSIsImVtYWlsIjoiZGFyaWEubW9uYWhhbkBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7fSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTcwMjkwMDQxNn1dLCJzZXNzaW9uX2lkIjoiNjA1N2I3ZmItZTc4ZC00ZTQ0LWJjMjQtMzQ2MDhiYTc1ZWM3In0.S87VfzJLGwq4JKdMvQIJfh20jL5zsbCv_XP0JG8Ft-A",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702904017,
+            "refresh_token": "1K4owRP4VxV-d0suBDi3Kw",
+            "user": {
+                "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "daria.monahan@gmail.com",
+                "email_confirmed_at": "2023-12-18T11:53:35.939505Z",
+                "phone": "",
+                "confirmed_at": "2023-12-18T11:53:35.939505Z",
+                "last_sign_in_at": "2023-12-18T11:53:36.666427824Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "03cb9408-be4a-40f6-9525-20c884a67958",
+                        "id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                        "user_id": "4243655c-9697-4570-bda5-6ab1f197bda1",
+                        "identity_data": {
+                            "email": "daria.monahan@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "4243655c-9697-4570-bda5-6ab1f197bda1"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T11:53:35.938154Z",
+                        "created_at": "2023-12-18T11:53:35.938198Z",
+                        "updated_at": "2023-12-18T11:53:35.938198Z",
+                        "email": "daria.monahan@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T11:53:35.935994Z",
+                "updated_at": "2023-12-18T11:53:36.667955Z"
+            }
+        }
+    }
+}
+2023-12-18T17:23:36,714 [Test worker] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended
+2023-12-18T17:34:27,081 [Test worker] INFO  (BaseTest.java:42) - java.net.UnknownHostException: qa.apicademy.dev: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1377)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at listener.RestAssuredListener.filter(RestAssuredListener.java:19)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at clients.UserClient.signup(UserClient.java:29)
+	at spec.UserSignUp.validateUserSignUp(UserSignUp.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:145)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:92)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+2023-12-18T17:36:18,522 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"troy.davis@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "6385e7dd-e879-43ff-b978-f1ed82fb512e",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "troy.davis@gmail.com",
+            "email_confirmed_at": "2023-12-18T12:06:18.35639561Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T12:06:18.359438824Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "90141284-bac8-498c-80cb-904791aade81",
+                    "id": "6385e7dd-e879-43ff-b978-f1ed82fb512e",
+                    "user_id": "6385e7dd-e879-43ff-b978-f1ed82fb512e",
+                    "identity_data": {
+                        "email": "troy.davis@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "6385e7dd-e879-43ff-b978-f1ed82fb512e"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T12:06:18.355231659Z",
+                    "created_at": "2023-12-18T12:06:18.355276Z",
+                    "updated_at": "2023-12-18T12:06:18.355276Z",
+                    "email": "troy.davis@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T12:06:18.353233Z",
+            "updated_at": "2023-12-18T12:06:18.361168Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA0Nzc4LCJpYXQiOjE3MDI5MDExNzgsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjYzODVlN2RkLWU4NzktNDNmZi1iOTc4LWYxZWQ4MmZiNTEyZSIsImVtYWlsIjoidHJveS5kYXZpc0BnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7fSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTcwMjkwMTE3OH1dLCJzZXNzaW9uX2lkIjoiYzJmZjAyYTgtMzBhYy00ODRkLThiMDYtZTM2ZjM1MWFmYWZjIn0.MNx-FIqFJcgk0OdlTTMSfjyDwWbyiMEwg7GIto9xVa8",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702904778,
+            "refresh_token": "ZMjefbgUYmuTBImbHfJzWg",
+            "user": {
+                "id": "6385e7dd-e879-43ff-b978-f1ed82fb512e",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "troy.davis@gmail.com",
+                "email_confirmed_at": "2023-12-18T12:06:18.35639561Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T12:06:18.359438824Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "90141284-bac8-498c-80cb-904791aade81",
+                        "id": "6385e7dd-e879-43ff-b978-f1ed82fb512e",
+                        "user_id": "6385e7dd-e879-43ff-b978-f1ed82fb512e",
+                        "identity_data": {
+                            "email": "troy.davis@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "6385e7dd-e879-43ff-b978-f1ed82fb512e"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T12:06:18.355231659Z",
+                        "created_at": "2023-12-18T12:06:18.355276Z",
+                        "updated_at": "2023-12-18T12:06:18.355276Z",
+                        "email": "troy.davis@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T12:06:18.353233Z",
+                "updated_at": "2023-12-18T12:06:18.361168Z"
+            }
+        }
+    }
+}
+2023-12-18T17:36:30,007 [Test worker] INFO  (UserLoginTest.java:42) - validateUserLogin test execution started
+2023-12-18T17:36:32,698 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/signup
+ Request body {"password":"123456","email":"ann.crist@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "ann.crist@gmail.com",
+            "email_confirmed_at": "2023-12-18T12:06:32.509436259Z",
+            "phone": "",
+            "last_sign_in_at": "2023-12-18T12:06:32.511722217Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "7d6b0454-d3fd-48b5-abc8-219ed6405ad2",
+                    "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                    "user_id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                    "identity_data": {
+                        "email": "ann.crist@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T12:06:32.508136506Z",
+                    "created_at": "2023-12-18T12:06:32.50818Z",
+                    "updated_at": "2023-12-18T12:06:32.50818Z",
+                    "email": "ann.crist@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T12:06:32.505902Z",
+            "updated_at": "2023-12-18T12:06:32.513292Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA0NzkyLCJpYXQiOjE3MDI5MDExOTIsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjZjYjZkMDhkLTk1YzgtNGRiZi1iMGYwLWU2MzgyMGUzNzhjZiIsImVtYWlsIjoiYW5uLmNyaXN0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnt9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzAyOTAxMTkyfV0sInNlc3Npb25faWQiOiIzOGY0NGViYS02NmRmLTQwNzEtYWMzMC1kNDAyZDgzNzcxMDUifQ.DazpgS4gFL_zPDLtCAk7MGg6P4FXTu36HIsVtQRArR4",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702904793,
+            "refresh_token": "yHw0R2u97ABKv6ZH7ZOE4w",
+            "user": {
+                "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "ann.crist@gmail.com",
+                "email_confirmed_at": "2023-12-18T12:06:32.509436259Z",
+                "phone": "",
+                "last_sign_in_at": "2023-12-18T12:06:32.511722217Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "7d6b0454-d3fd-48b5-abc8-219ed6405ad2",
+                        "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                        "user_id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                        "identity_data": {
+                            "email": "ann.crist@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T12:06:32.508136506Z",
+                        "created_at": "2023-12-18T12:06:32.50818Z",
+                        "updated_at": "2023-12-18T12:06:32.50818Z",
+                        "email": "ann.crist@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T12:06:32.505902Z",
+                "updated_at": "2023-12-18T12:06:32.513292Z"
+            }
+        }
+    }
+}
+2023-12-18T17:36:33,310 [Test worker] INFO  (RestAssuredListener.java:28) - 
+ Method =>POST
+ URI => https://www.apicademy.dev/api/auth/login
+ Request body {"password":"123456","email":"ann.crist@gmail.com"}
+ Response body {
+    "data": {
+        "user": {
+            "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+            "aud": "authenticated",
+            "role": "authenticated",
+            "email": "ann.crist@gmail.com",
+            "email_confirmed_at": "2023-12-18T12:06:32.509436Z",
+            "phone": "",
+            "confirmed_at": "2023-12-18T12:06:32.509436Z",
+            "last_sign_in_at": "2023-12-18T12:06:33.279346226Z",
+            "app_metadata": {
+                "provider": "email",
+                "providers": [
+                    "email"
+                ]
+            },
+            "user_metadata": {
+                
+            },
+            "identities": [
+                {
+                    "identity_id": "7d6b0454-d3fd-48b5-abc8-219ed6405ad2",
+                    "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                    "user_id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                    "identity_data": {
+                        "email": "ann.crist@gmail.com",
+                        "email_verified": false,
+                        "phone_verified": false,
+                        "sub": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf"
+                    },
+                    "provider": "email",
+                    "last_sign_in_at": "2023-12-18T12:06:32.508136Z",
+                    "created_at": "2023-12-18T12:06:32.50818Z",
+                    "updated_at": "2023-12-18T12:06:32.50818Z",
+                    "email": "ann.crist@gmail.com"
+                }
+            ],
+            "created_at": "2023-12-18T12:06:32.505902Z",
+            "updated_at": "2023-12-18T12:06:33.281075Z"
+        },
+        "session": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImV3UjBaUnlOMG5IRHE0RzYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAyOTA0NzkzLCJpYXQiOjE3MDI5MDExOTMsImlzcyI6Imh0dHBzOi8vbmFxbWh2ZnNkaGlnZXN2cnJqY2wuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjZjYjZkMDhkLTk1YzgtNGRiZi1iMGYwLWU2MzgyMGUzNzhjZiIsImVtYWlsIjoiYW5uLmNyaXN0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnt9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzAyOTAxMTkzfV0sInNlc3Npb25faWQiOiIxMzMxMWM2Ny00NTc0LTQzZmQtODQ3NC03MzdkNDk2NGQ3ZmIifQ.Zc3L7YFUkJxmPWAph0b8Xiznx9JHH6LRec1VNTfKko8",
+            "token_type": "bearer",
+            "expires_in": 3600,
+            "expires_at": 1702904793,
+            "refresh_token": "x_Ccrk37VTcNcFrTWvzFVw",
+            "user": {
+                "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                "aud": "authenticated",
+                "role": "authenticated",
+                "email": "ann.crist@gmail.com",
+                "email_confirmed_at": "2023-12-18T12:06:32.509436Z",
+                "phone": "",
+                "confirmed_at": "2023-12-18T12:06:32.509436Z",
+                "last_sign_in_at": "2023-12-18T12:06:33.279346226Z",
+                "app_metadata": {
+                    "provider": "email",
+                    "providers": [
+                        "email"
+                    ]
+                },
+                "user_metadata": {
+                    
+                },
+                "identities": [
+                    {
+                        "identity_id": "7d6b0454-d3fd-48b5-abc8-219ed6405ad2",
+                        "id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                        "user_id": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf",
+                        "identity_data": {
+                            "email": "ann.crist@gmail.com",
+                            "email_verified": false,
+                            "phone_verified": false,
+                            "sub": "6cb6d08d-95c8-4dbf-b0f0-e63820e378cf"
+                        },
+                        "provider": "email",
+                        "last_sign_in_at": "2023-12-18T12:06:32.508136Z",
+                        "created_at": "2023-12-18T12:06:32.50818Z",
+                        "updated_at": "2023-12-18T12:06:32.50818Z",
+                        "email": "ann.crist@gmail.com"
+                    }
+                ],
+                "created_at": "2023-12-18T12:06:32.505902Z",
+                "updated_at": "2023-12-18T12:06:33.281075Z"
+            }
+        }
+    }
+}
+2023-12-18T17:36:33,337 [Test worker] INFO  (UserLoginTest.java:56) - validateUserLogin test execution ended

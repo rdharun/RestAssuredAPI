@@ -20,7 +20,8 @@ public class BaseTest {
 
     @BeforeTest
     public void setUp() {
-        String baseUrl = PropertyUtils.getProperty("base_url");
+        String environment = System.getProperty("environment", "dev");
+        String baseUrl = PropertyUtils.getProperty("base_url", environment);
         RestAssured.baseURI = baseUrl;
     }
 

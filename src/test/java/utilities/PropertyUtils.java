@@ -6,8 +6,8 @@ import java.util.Properties;
 
 public class PropertyUtils {
 
-    public static String getProperty(String propertyName) {
-        String configPropertyFilePath = "src/main/resources/config.properties";
+    public static String getProperty(String propertyName, String environment) {
+        String configPropertyFilePath = "src/main/resources/" + environment + ".properties";
         Properties properties = new Properties();
         try {
             FileInputStream configFile = new FileInputStream(configPropertyFilePath);
