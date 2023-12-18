@@ -24,6 +24,12 @@ public class RestAssuredListener implements Filter {
                     "\n Request body " + requestSpec.getBody() +
                     "\n Response body " + response.getBody().prettyPrint()
             );
+        } else {
+            logger.info("\n Method =>" + requestSpec.getMethod() +
+                    "\n URI => " + requestSpec.getURI() +
+                    "\n Request body " + requestSpec.getBody() +
+                    "\n Response body " + response.getBody().prettyPrint()
+            );
         }
         return response;
     }
