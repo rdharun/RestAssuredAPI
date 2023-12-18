@@ -45,7 +45,7 @@ public class BaseTest {
 
     }
 
-    private void loadConfigurationsForEnvironment(String environment) {
+    protected void loadConfigurationsForEnvironment(String environment) {
         try {
             RestAssured.baseURI = PropertyUtils.getProperty("base_url", environment);
             // Add other environment-specific configurations if needed
