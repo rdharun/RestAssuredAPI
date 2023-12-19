@@ -42,8 +42,9 @@ bin/
 .DS_Store
 
 ## logs ##
-logs/browserstack-plugin.log
 logs
+logs/browserstack-plugin.log
+
 
 ## allure-results ##
 allure-results/
