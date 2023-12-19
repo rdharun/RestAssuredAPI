@@ -35,7 +35,7 @@ public class UserClient {
     }
 
 
-    public LoginResponseBody login(String email, String password, String accessToken) {
+    public LoginResponseBody login(String email, String password) {
         String loginEndpoint = EndpointConfig.getEndpoint("auth", "login");
 
         LoginRequestBody loginRequestBody = LoginRequestBody.builder()
@@ -46,7 +46,6 @@ public class UserClient {
         Response response = RestAssured.given()
                 .filter(new RestAssuredListener())
                 .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + accessToken)
                 .body(loginRequestBody)
                 .when()
                 .post(loginEndpoint);
