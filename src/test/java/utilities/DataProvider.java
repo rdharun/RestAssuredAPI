@@ -3,12 +3,16 @@ package utilities;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class DataProvider {
+
+    private static final Logger logger = LogManager.getLogger(DataProvider.class);
     private String filePath;
 
     public DataProvider(String filePath) {
@@ -34,15 +38,15 @@ public class DataProvider {
 
             return objectMapper.treeToValue(userDataNode, classType);
         } catch (FileNotFoundException e) {
-            System.err.println("File not found: " + filePath);
+            logger.error("File not found: {}", filePath, e);
             e.printStackTrace();
             return null;
         } catch (JsonParseException e) {
-            System.out.println("Error parsing JSON file: " + filePath);
+            logger.error("Error parsing JSON file: {}", filePath, e);
             e.printStackTrace();
             return null;
         } catch (IOException e) {
-            System.out.println("An I/O error occurred when accessing the file: " + filePath);
+            logger.error("An I/O error occurred when accessing the file: {}", filePath, e);
             e.printStackTrace();
             return null;
         }

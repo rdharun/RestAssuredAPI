@@ -7,6 +7,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import utilities.ConfigConstants;
 import utilities.PropertyUtils;
 import static org.testng.Assert.fail;
 
@@ -47,7 +48,7 @@ public class BaseTest {
 
     protected void loadConfigurationsForEnvironment(String environment) {
         try {
-            RestAssured.baseURI = PropertyUtils.getProperty("base_url", environment);
+            RestAssured.baseURI = PropertyUtils.getProperty(ConfigConstants.BASE_URL, environment);
             // Add other environment-specific configurations if needed
         } catch (Exception e) {
             logger.error("Failed to load configurations for environment: " + environment, e);

@@ -3,22 +3,23 @@ package spec;
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertNotNull;
+import utilities.ConfigConstants;
 
 public class ConfigurationValidationTest {
 
     @Test
     public void validateDevConfiguration() {
-        validateConfigurationForEnvironment("dev");
+        validateConfigurationForEnvironment(ConfigConstants.DEV_PROPERTIES);
     }
 
     @Test
     public void validateQAConfiguration() {
-        validateConfigurationForEnvironment("qa");
+        validateConfigurationForEnvironment(ConfigConstants.QA_PROPERTIES);
     }
 
     @Test
     public void validateProdConfiguration() {
-        validateConfigurationForEnvironment("prod");
+        validateConfigurationForEnvironment(ConfigConstants.PROD_PROPERTIES);
     }
 
     private void validateConfigurationForEnvironment(String environment) {
