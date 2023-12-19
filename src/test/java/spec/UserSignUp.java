@@ -31,17 +31,14 @@ public class UserSignUp extends BaseTest {
     @Feature("Signup")
     public void validateUserSignUp() {
 
-
         String randomEmail = randomData.generateRandomEmail("gmail.com");
 
         String password = userDataProvider.getData("validUser", UserData.class).getPassword();
-
 
         SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
 
         signupResponseBody.assertSignupResponse(randomEmail);
 
     }
-
 
 }

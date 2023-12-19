@@ -41,17 +41,13 @@ public class UserLoginTest extends BaseTest {
 
         logger.info("validateUserLogin test execution started");
 
-
-        String randomEmail = randomData.generateRandomEmail("gmail.com");
         UserData validUser = userDataProvider.getData("validUser", UserData.class);
+        String email = validUser.getEmail();
         String password = validUser.getPassword();
 
-        SignupResponseBody signupResponseBody = userClient.signup(randomEmail, password);
-        String accessToken = signupResponseBody.getData().getSession().getAccessToken();
+        LoginResponseBody loginResponseBody = userClient.login(email, password);
 
-        LoginResponseBody loginResponseBody = userClient.login(randomEmail, password, accessToken);
-
-        loginResponseBody.assertLoginResponse(randomEmail);
+        loginResponseBody.assertLoginResponse(email);
 
         logger.info("validateUserLogin test execution ended");
 
