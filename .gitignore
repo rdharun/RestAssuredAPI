@@ -16,7 +16,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
+### Ecoipse ###
 .apt_generated
 .classpath
 .factorypath
@@ -43,6 +43,7 @@ bin/
 
 ## logs ##
 logs/browserstack-plugin.log
+logs
 
 ## allure-results ##
 allure-results/
