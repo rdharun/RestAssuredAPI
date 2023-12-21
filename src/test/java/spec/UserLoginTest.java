@@ -3,7 +3,6 @@ package spec;
 import clients.UserClient;
 import io.qameta.allure.*;
 import models.LoginResponseBody;
-import models.SignupResponseBody;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeClass;
