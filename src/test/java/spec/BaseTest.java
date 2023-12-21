@@ -7,9 +7,8 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import utilities.ConfigConstants;
-import utilities.PropertyUtils;
-import static org.testng.Assert.fail;
+import utilities.EnvironmentUtils;
+
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -22,8 +21,10 @@ public class BaseTest {
 
     @BeforeTest
     public void setUp() {
-        String environment = System.getProperty("environment", "dev");
-        loadConfigurationsForEnvironment(environment);
+        String baseUrl = EnvironmentUtils.getBaseUrl();
+        RestAssured.baseURI = baseUrl;
+        logger.info("Test suite setup complete. Environment: {}, Base URL: {}", EnvironmentUtils.getTestEnvironment(), RestAssured.baseURI);
+
     }
 
 
@@ -44,16 +45,6 @@ public class BaseTest {
             logger.info(error.toString());
         }
 
-    }
-
-    protected void loadConfigurationsForEnvironment(String environment) {
-        try {
-            RestAssured.baseURI = PropertyUtils.getProperty(ConfigConstants.BASE_URL, environment);
-            // Add other environment-specific configurations if needed
-        } catch (Exception e) {
-            logger.error("Failed to load configurations for environment: " + environment, e);
-            fail("Environment setup failed for: " + environment);
-        }
     }
 
 }

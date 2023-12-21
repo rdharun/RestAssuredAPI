@@ -28,10 +28,10 @@ public class UserClient {
                 .when()
                 .post(signupEndpoint);
 
-        SignupResponseBody signupResponseBodyBody = response.as(SignupResponseBody.class);
-        signupResponseBodyBody.setStatusCode(response.getStatusCode());
+        SignupResponseBody signupResponseBody = response.as(SignupResponseBody.class);
+        signupResponseBody.setStatusCode(response.getStatusCode());
 
-        return signupResponseBodyBody;
+        return signupResponseBody;
     }
 
 
